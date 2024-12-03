@@ -1,16 +1,53 @@
-"use client";
+"use client"; // Ensure this is included at the top for client-side rendering
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  // Function to handle video progress with proper type annotation for the event
+  const handleVideoProgress = (event: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    const video = event.target as HTMLVideoElement;
+
+    if (video.buffered.length > 0) {
+      const bufferedEnd = video.buffered.end(0); // Get the end of the buffered range
+      const duration = video.duration;
+
+      // Calculate the percentage of the video that is buffered
+      if (duration > 0) {
+        const percentage = (bufferedEnd / duration) * 100;
+        setProgress(percentage);
+      }
+    }
+  };
+
+  // Set video loaded when it can play
+  const handleCanPlay = () => {
+    setIsVideoLoaded(true);
+  };
+
+  // Handle video loading error
+  const handleVideoError = () => {
+    console.error("Video failed to load");
+  };
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Loader */}
+      {/* Loader with Percentage */}
       {!isVideoLoaded && (
         <div className="absolute inset-0 flex items-center justify-center bg-black z-50">
-          <div className="w-12 h-12 border-4 border-gray-300 border-t-white rounded-full animate-spin"></div>
+          <div className="w-24 h-24 relative">
+            <div className="absolute inset-0 flex justify-center items-center text-white font-bold">
+              <span>{Math.round(progress)}%</span>
+            </div>
+            <div
+              className="w-full h-full border-4 border-gray-300 border-t-white rounded-full animate-spin"
+              style={{
+                transform: `rotate(${progress * 3.6}deg)`, // Adjust rotation based on the progress
+              }}
+            ></div>
+          </div>
         </div>
       )}
 
@@ -21,7 +58,9 @@ export default function Home() {
         autoPlay
         loop
         muted
-        onCanPlayThrough={() => setIsVideoLoaded(true)}
+        onCanPlayThrough={handleCanPlay}
+        onProgress={handleVideoProgress}
+        onError={handleVideoError}
       ></video>
 
       {/* Header */}
