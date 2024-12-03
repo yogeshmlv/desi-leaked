@@ -50,8 +50,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <meta name="google-site-verification" content="EKvEgJfWFyocMLM4X5WkNXIcmV2ECcMyR0Z5UiVMKUk" />
         {/* Essential Meta Tags */}
-        <meta name="google-site-verification" content="googlec05f17b099e8031e" />
         <meta name="keywords" content="Desi Leaked, Trends, Latest News, Engineer Content, Exclusive Updates" />
         <meta name="author" content="Desi Leaked" />
         <meta name="robots" content="index, follow" />
