@@ -1,6 +1,6 @@
 "use client"; // Ensure this is included at the top for client-side rendering
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
