@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Desi Leaked",
     images: [
       {
-        url: "/og-image.jpg", // Replace with your image path
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Desi Leaked Logo",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Desi Leaked - Explore Latest Trends",
     description: "Discover the latest trends and updates on Desi Leaked.",
-    site: "@yourTwitterHandle", // Replace with your Twitter username
+    site: "@yourTwitterHandle",
     creator: "@yourTwitterHandle",
-    images: ["/og-image.jpg"], // Replace with your image path
+    images: ["/og-image.jpg"],
   },
   viewport: "width=device-width, initial-scale=1.0",
 };
