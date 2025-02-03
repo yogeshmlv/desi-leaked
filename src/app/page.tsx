@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import './styles.css'; // Adjust the path according to your project structure
 export default function Home() {
   const [isModalVisible, setIsModalVisible] = useState(true); // Modal visibility state
