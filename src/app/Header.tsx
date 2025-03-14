@@ -1,10 +1,14 @@
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 // Mobile Header Component
-export const MobileHeader = ({ toggleSidebar }: { toggleSidebar: () => void }) => (
+export const MobileHeader = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
+  const router = useRouter();
+
+  return (
   <div className="md:hidden fixed left-0 right-0 z-50 flex items-center justify-between px-6 bg-white text-black shadow-[0px_2px_8px_0px_rgba(0,0,0,.06)] h-[60px] md:h-[80px]">
     <div
-      // onClick={toggleSidebar}
+      onClick={() => router.push('/')}
       className="text-black text-xl font-bold cursor-pointer"
     >
       <Image
@@ -25,6 +29,7 @@ export const MobileHeader = ({ toggleSidebar }: { toggleSidebar: () => void }) =
     </button>
   </div>
 );
+}
 
 // Desktop Header Component (No Change Needed)
 export const DesktopHeader = () => (
