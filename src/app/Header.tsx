@@ -4,7 +4,7 @@ import Image from 'next/image';
 export const MobileHeader = ({ toggleSidebar }: { toggleSidebar: () => void }) => (
   <div className="md:hidden fixed left-0 right-0 z-50 flex items-center justify-between px-6 bg-white text-black shadow-[0px_2px_8px_0px_rgba(0,0,0,.06)] h-[60px] md:h-[80px]">
     <div
-      onClick={toggleSidebar}
+      // onClick={toggleSidebar}
       className="text-black text-xl font-bold cursor-pointer"
     >
       <Image
