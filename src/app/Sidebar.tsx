@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+'use client'
 // Sidebar Component
 const Sidebar = ({ isOpen, toggleSidebar }: { isOpen: boolean; toggleSidebar: () => void }) => (
   <div
