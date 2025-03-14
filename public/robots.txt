@@ -1,4 +1,4 @@
-User-agent: *
-Disallow: /private-page/
-Allow: /public-page/
+User-agent: * 
+Disallow: /private-page/ 
+Allow: /public-page/ 
 Sitemap: https://desileaked.com/sitemap.xml
