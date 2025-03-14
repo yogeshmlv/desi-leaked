@@ -51,7 +51,7 @@ export default function Home() {
               Warning: Explicit Content
             </h2>
             <p className="text-black mb-6">
-              You are about to enter a website that contains explicit material (pornography).
+              You are about to enter a website that contains explicit material ().
               This website should only be accessed if you are at least 18 years old or of legal
               age to view such material in your local jurisdiction, whichever is greater. You
               represent and warrant that you will not allow any minor access to this site or services.
