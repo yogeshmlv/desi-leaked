@@ -63,7 +63,7 @@ export default function BfsiHero() {
             <SwiperSlide>
               <div className="relative w-full h-[440px] md:h-[350px] bg-[#DAEDFF] rounded-[12px] shadow-lg overflow-hidden">
                 <Image
-                  src="/hero1.jpeg"  // Local Image
+                  src="/hero1.jpg"  // Local Image
                   alt="Leaked Content"
                   layout="fill"
                   objectFit="cover"
@@ -98,7 +98,7 @@ export default function BfsiHero() {
           {/* First Card */}
           <div className="relative w-[276px] h-[411px] bg-[#DAEDFF] rounded-[12px] shadow-lg overflow-hidden">
             <Image
-              src="/hero1.jpeg"  // Local Image
+              src="/hero1.jpg"  // Local Image
               alt="Leaked Content"
               layout="fill"
               objectFit="cover"
