@@ -33,7 +33,7 @@ export const MobileHeader = ({ toggleSidebar }: { toggleSidebar: () => void }) =
 
 // Desktop Header Component (No Change Needed)
 export const DesktopHeader = () => (
-  <header className="absolute top-0 left-0 w-full p-2 bg-white text-black shadow-[0px_2px_8px_0px_rgba(0,0,0,.06)] z-10 hidden md:flex justify-between items-center">
+  <header className="absolute top-0 left-0 w-full p-2 pr-6 bg-white text-black shadow-[0px_2px_8px_0px_rgba(0,0,0,.06)] z-10 hidden md:flex justify-between items-center">
     <div className="text-black text-xl sm:text-2xl font-bold flex items-center space-x-3">
       <Image
         src="/logo.png"
